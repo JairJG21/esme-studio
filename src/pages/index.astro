@@ -17,24 +17,31 @@ import { Icon } from 'astro-iconify'
 	</div>
 	<nav>
 		<div class="navbar bg-white">
-			<div class="navbar-start">
-				<div class="drawer">
-					<input id="my-drawer" type="checkbox" class="drawer-toggle" />
-					<div class="drawer-content">
-						<label for="my-drawer" class="drawer-button"><Icon id="my-drawer" name="heroicons:bars-3" class="text-black icon-md" /></label>
-					</div>
-					<div class="drawer-side">
-						<label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-						<ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4 flex justify-center items-center">
-							<label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"><Icon name="heroicons:x-mark" class="text-3xl"/></label>
-							<li class="nav-item2"><a>Inicio</a></li>
-							<li class="nav-item2"><a>Sevicios</a></li>
-							<li class="nav-item2"><a>Quien soy</a></li>
-							<li class="nav-item2"><a>Galeria</a></li>
-						</ul>
+			<div class="w-full">
+				<div class="w-1/3">
+					<div class="drawer">
+						<input id="my-drawer" type="checkbox" class="drawer-toggle" />
+						<div class="drawer-content">
+							<label for="my-drawer" class="drawer-button"><Icon id="my-drawer" name="heroicons:bars-3" class="text-black icon-md" /></label>
+						</div>
+						<div class="drawer-side">
+							<label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+							<ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4 flex justify-center items-center">
+								<label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"><Icon name="heroicons:x-mark" class="text-3xl"/></label>
+								<li class="nav-item2"><a>Inicio</a></li>
+								<li class="nav-item2"><a>Sevicios</a></li>
+								<li class="nav-item2"><a>Quien soy</a></li>
+								<li class="nav-item2"><a>Galeria</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<a class="w-[40px]"><img src="/img/esme-logo.svg" alt=""></a>
+				<div class="w-1/3 flex items-center justify-center">
+					<a class="w-[40px] block"><img src="/img/esme-logo.svg" alt=""></a>
+				</div>
+				<div class="w-1/3">
+					<a class="btn btn-greensea">Agendar cita</a>
+				</div>
 			</div>
 			<div class="navbar-center hidden lg:flex">
 			  <ul class="menu menu-horizontal px-1">
@@ -50,10 +57,7 @@ import { Icon } from 'astro-iconify'
 				</li>
 				<li><a>Item 3</a></li>
 			  </ul>
-			</div>
-			<div class="navbar-end">
-				<a class="btn btn-greensea">Agendar cita</a>
-			</div>
+			</div>			
 		</div>
 	</nav>
 </Layout>
