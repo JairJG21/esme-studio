@@ -13,6 +13,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource-variable/lexend": "^5.1.0",
     "@iconify-json/heroicons": "^1.2.0",
+    "@iconify-json/ic": "^1.2.0",
     "astro": "^4.14.5",
     "astro-iconify": "^1.2.0",
     "flowbite": "^2.5.1",
