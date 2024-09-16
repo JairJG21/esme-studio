@@ -1,4 +1,5 @@
 ---
+import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-iconify'
 ---
@@ -64,7 +65,7 @@ import { Icon } from 'astro-iconify'
 				<div class="hidden duration-700 ease-in-out" data-carousel-item>
 					<img src="/img/carousel_1.webp" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
 					<div class="absolute inset-0 bg-black/65"></div>
-					<div class="absolute inset-0 flex items-center justify-center flex-col px-20 text-center">
+					<div class="absolute inset-0 flex items-center justify-center flex-col px-5 text-center">
 						<h1 class="text-white text-4xl font-bold">¡Renueva tu belleza con nosotros!</h1>
 						<p class="text-white textarea-md">Reserva tu cita y descrube nuestra magia.</p>
 						<a class="btn btn-greensea" href="">Conocer Servicios</a>
@@ -73,7 +74,7 @@ import { Icon } from 'astro-iconify'
 				<div class="hidden duration-700 ease-in-out" data-carousel-item>
 					<img src="/img/carousel_2.jpeg" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
 					<div class="absolute inset-0 bg-black/65"></div>
-					<div class="absolute inset-0 flex items-center justify-center flex-col px-20 text-center">
+					<div class="absolute inset-0 flex items-center justify-center flex-col px-5 text-center">
 						<h1 class="text-white text-4xl font-bold">¡Renueva tu belleza con nosotros!</h1>
 						<p class="text-white textarea-md">Reserva tu cita y descrube nuestra magia.</p>
 						<a class="btn btn-greensea" href="">Conocer Servicios</a>
@@ -102,12 +103,100 @@ import { Icon } from 'astro-iconify'
 			</button>
 		</div>
 	</section>
+	<section>
+		<div class="w-full text-center mt-10">
+			<h1 class="text-3xl text-dark-custom font-bold">Servicios</h1>
+		</div>
+		<div class="mb-4 mt-5 px-3">
+			<ul class="flex flex-wrap -mb-px text-sm font-medium text-center tabs-mod" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" role="tablist">
+				<li class="me-2" role="presentation">
+					<button class="inline-block active" id="v1-styled-tab" data-tabs-target="#styled-v1" type="button" role="tab" aria-controls="v1" aria-selected="true">Promociones</button>
+				</li>
+				<li class="me-2" role="presentation">
+					<button class="inline-block" id="v2-styled-tab" data-tabs-target="#styled-v2" type="button" role="tab" aria-controls="v2" aria-selected="false">Acido Glicolico</button>
+				</li>
+				<li class="me-2" role="presentation">
+					<button class="inline-block" id="v3-styled-tab" data-tabs-target="#styled-v3" type="button" role="tab" aria-controls="v3" aria-selected="false">Radiografia Facial</button>
+				</li>
+				<li role="presentation">
+					<button class="inline-block" id="v4-styled-tab" data-tabs-target="#styled-v4" type="button" role="tab" aria-controls="v4" aria-selected="false">Dermapen</button>
+				</li>
+				<li role="presentation">
+					<button class="inline-block" id="v5-styled-tab" data-tabs-target="#styled-v5" type="button" role="tab" aria-controls="v5" aria-selected="false">Micropigmentacion</button>
+				</li>
+				<li role="presentation">
+					<button class="inline-block" id="v6-styled-tab" data-tabs-target="#styled-v6" type="button" role="tab" aria-controls="v6" aria-selected="false">Delineado</button>
+				</li>
+			</ul>
+		</div>
+		<div id="default-styled-tab-content">
+			<div class="hidden pt-3 px-5" id="styled-v1" role="tabpanel" aria-labelledby="v1-tab">
+				<Card/>
+			</div>
+			<div class="hidden pt-3 px-5" id="styled-v2" role="tabpanel" aria-labelledby="v2-tab">
+				<Card/>
+			</div>
+			<div class="hidden pt-3 px-5" id="styled-v3" role="tabpanel" aria-labelledby="v3-tab">
+				<Card/>
+			</div>
+			<div class="hidden pt-3 px-5" id="styled-v4" role="tabpanel" aria-labelledby="v4-tab">
+				<Card/>
+			</div>
+			<div class="hidden pt-3 px-5" id="styled-v5" role="tabpanel" aria-labelledby="v5-tab">
+				<Card/>
+			</div>
+			<div class="hidden pt-3 px-5" id="styled-v6" role="tabpanel" aria-labelledby="v6-tab">
+				<Card/>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="bg-greensea-custom mt-20 relative">
+			<img src="/img/esme.png" alt="">
+			<div class="w-full">
+				<div>
+					<h2>Arte, ciencia y pasión</h2>
+					<h1>al servicio de tu belleza.</h1>
+				</div>
+				<p>Soy Esme Alcala, estilista apasionado con más de 4 años de experiencia en el mundo de la belleza.</p>
+				<p>Mi misión es ayudarte a descubrir y realzar tu belleza única a través de técnicas personalizadas y un enfoque artístico. Creo que cada persona merece sentirse segura y hermosa en su propia piel, y es un honor para mí ser parte de ese viaje.</p>
+			</div>
+			<div class="w-full">
+				<div class="w-1/2">
+					<div>
+						<p>+50</p>
+						<span>clientas felices</span>
+					</div>
+					<div>
+						<p>+50</p>
+						<span>clientas felices</span>
+					</div>
+					<div>
+						<Icon name="mdi:facebook" />
+						<Icon name="mdi:instagram" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main modal -->
+	<dialog id="my_modal_3" class="modal modal-bottom sm:modal-middle">
+	<div class="modal-box">
+		<form method="dialog">
+		<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+		</form>
+		<h3 class="text-lg font-bold">Acido Glicólico + Radiofrecuencia Facial</h3>
+		<p class="py-4">Ayuda a la hiperpigmentación, las quemaduras solares, reduce las líneas de expresión, arrugas, manchas y le devuelve la luminosidad al rostro. El ácido glicólico corrige los problemas de la piel favoreciendo la renovación celular de las capas superiores de esta a través de la exfoliación. Ayuda frente a la sequedad de la piel, el eczema y la psoriasis, así como también, las verrugas, la piel áspera y la rosácea.
+			</p>
+	</div>
+	</dialog>
 </Layout>
 
 <style>
 	.icon-sm {
 		width: 22px;
-	}
+	} 
 	.icon-md {
 		width: 35px;
 	}
@@ -161,4 +250,44 @@ import { Icon } from 'astro-iconify'
 	.btn-whatsapp {
 		width: 40px;
 	}
+	.tabs-mod {
+		height: 45px;
+		overflow: scroll;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		flex-wrap: nowrap;
+	}
+	.tabs-mod li button {
+		border: solid 1px #95d2b3;
+		padding: 10px 20px;
+		border-radius: 999px;
+		color: #95d2b3;
+		transition: all 0.2s ease;
+		white-space: nowrap;
+	}
+	.tabs-mod li button.active {
+		background-color: #95d2b3;
+		padding: 10px 20px;
+		border-radius: 999px;
+		color: #fff;
+	}	
 </style>
+
+<script>
+	let tabs = document.querySelectorAll('#default-styled-tab > li > button');
+
+	tabs.forEach(element => {
+		
+		element.addEventListener('click' , () => {
+
+			tabs.forEach(element => {
+				element.classList.remove('active');
+			});
+
+			element.classList.add('active');
+
+		})
+		
+	});
+</script>

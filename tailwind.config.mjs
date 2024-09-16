@@ -8,6 +8,16 @@ export default {
 		extend: {
 			colors: {
 				'greensea-custom': '#95D2B3',
+				'dark-custom': '#252422',
+			},
+			keyframes: {
+				fade: {
+					'0%': { opacity: 1 },
+					'100%': { opacity: 0 },
+				}
+			},
+			animation: {
+				fade: 'fade 1s ease-in-out linear',
 			}
 		},
 	},
