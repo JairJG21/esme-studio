@@ -1,12 +1,13 @@
 ---
 import Card from '../components/Card.astro';
+import Menu from '../components/Menu.astro';
 import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-iconify'
 ---
 
 <Layout title="Esme Studio">
-	<div class="section-btn-whatsapp">
-		<a class="btn-whatsapp"><Icon name="ic:baseline-whatsapp" /> <span class="hidden md:block">Agendar Cita</span></a>
+	<div class="section-btn-whatsapp" id="element-to-hide">
+		<a><Icon name="ic:baseline-whatsapp" /> <span class="hidden md:block">Agendar Cita</span></a>
 	</div>
 	<div id="alert-1" class="flex items-center p-4 text-white bg-greensea-custom" role="alert">
 		<Icon name="heroicons:calendar-date-range" class="icon-sm" />
@@ -19,46 +20,7 @@ import { Icon } from 'astro-iconify'
 			<Icon name="heroicons:x-mark" class="text-white" />
 		</button>
 	</div>
-	<nav class="navbar bg-white sticky top-0 z-50">
-		<div class="w-full px-2">
-			<div class="w-1/2 flex items-center justify-start">
-				<a class="w-[40px] block"><img src="/img/esme-logo.svg" alt=""></a>
-			</div>
-			<div class="w-1/2 flex items-center justify-end">
-				<div class="drawer">
-					<input id="my-drawer" type="checkbox" class="drawer-toggle" />
-					<div class="drawer-content flex items-center justify-end">
-						<label for="my-drawer" class="drawer-button"><Icon id="my-drawer" name="heroicons:bars-3" class="text-black icon-md" /></label>
-					</div>
-					<div class="drawer-side">
-						<label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-						<ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4 flex justify-center items-center">
-							<label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"><Icon name="heroicons:x-mark" class="text-3xl"/></label>
-							<li class="nav-item2"><a>Inicio</a></li>
-							<li class="nav-item2"><a>Sevicios</a></li>
-							<li class="nav-item2"><a>Quien soy</a></li>
-							<li class="nav-item2"><a>Galeria</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>				
-		</div>
-		<div class="navbar-center hidden lg:flex">
-			<ul class="menu menu-horizontal px-1">
-			<li><a>Item 1</a></li>
-			<li>
-				<details>
-				<summary>Parent</summary>
-				<ul class="p-2">
-					<li><a>Submenu 1</a></li>
-					<li><a>Submenu 2</a></li>
-				</ul>
-				</details>
-			</li>
-			<li><a>Item 3</a></li>
-			</ul>
-		</div>
-	</nav>
+	<Menu />
 	<section class="h-[550px]">
 		<div id="default-carousel" class="relative w-full h-full" data-carousel="slide">
 			<div class="relative h-full overflow-hidden md:h-96">
@@ -107,7 +69,7 @@ import { Icon } from 'astro-iconify'
 		<div class="w-full text-center mt-10">
 			<h1 class="text-3xl text-dark-custom font-bold">Servicios</h1>
 		</div>
-		<div class="mb-4 mt-5 px-3">
+		<div class="mb-4 mt-5 ps-5">
 			<ul class="flex flex-wrap -mb-px text-sm font-medium text-center tabs-mod" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" role="tablist">
 				<li class="me-2" role="presentation">
 					<button class="inline-block active" id="v1-styled-tab" data-tabs-target="#styled-v1" type="button" role="tab" aria-controls="v1" aria-selected="true">Promociones</button>
@@ -118,13 +80,13 @@ import { Icon } from 'astro-iconify'
 				<li class="me-2" role="presentation">
 					<button class="inline-block" id="v3-styled-tab" data-tabs-target="#styled-v3" type="button" role="tab" aria-controls="v3" aria-selected="false">Radiografia Facial</button>
 				</li>
-				<li role="presentation">
+				<li class="me-2" role="presentation">
 					<button class="inline-block" id="v4-styled-tab" data-tabs-target="#styled-v4" type="button" role="tab" aria-controls="v4" aria-selected="false">Dermapen</button>
 				</li>
-				<li role="presentation">
+				<li class="me-2" role="presentation">
 					<button class="inline-block" id="v5-styled-tab" data-tabs-target="#styled-v5" type="button" role="tab" aria-controls="v5" aria-selected="false">Micropigmentacion</button>
 				</li>
-				<li role="presentation">
+				<li class="me-5" role="presentation">
 					<button class="inline-block" id="v6-styled-tab" data-tabs-target="#styled-v6" type="button" role="tab" aria-controls="v6" aria-selected="false">Delineado</button>
 				</li>
 			</ul>
@@ -151,34 +113,146 @@ import { Icon } from 'astro-iconify'
 		</div>
 	</section>
 	<section>
-		<div class="bg-greensea-custom mt-20 relative">
-			<img src="/img/esme.png" alt="">
+		<div class="bg-greensea-custom mt-20 relative px-5 py-10 h-[900px]">
+			<img class="absolute bottom-0 -left-12 w-[300px]" src="/img/esme.png" alt="">
 			<div class="w-full">
-				<div>
-					<h2>Arte, ciencia y pasión</h2>
-					<h1>al servicio de tu belleza.</h1>
+				<div class="text-center mb-10">
+					<h2 class="text-3xl font-light text-greensea-custom2">Arte, ciencia y pasión</h2>
+					<h1 class="text-3xl font-semibold text-white">al servicio de tu belleza.</h1>
 				</div>
-				<p>Soy Esme Alcala, estilista apasionado con más de 4 años de experiencia en el mundo de la belleza.</p>
-				<p>Mi misión es ayudarte a descubrir y realzar tu belleza única a través de técnicas personalizadas y un enfoque artístico. Creo que cada persona merece sentirse segura y hermosa en su propia piel, y es un honor para mí ser parte de ese viaje.</p>
+				<p class="text-center text-white font-light">Soy <b class="font-semibold">Esme Alcala</b>, estilista apasionado con más de 4 años de experiencia en el mundo de la belleza.</p>
+				<p class="text-center text-white mt-5 font-light">Mi misión es ayudarte a descubrir y realzar tu belleza única a través de técnicas personalizadas y un enfoque artístico. Creo que cada persona merece sentirse segura y hermosa en su propia piel, y es un honor para mí ser parte de ese viaje.</p>
 			</div>
 			<div class="w-full">
-				<div class="w-1/2">
-					<div>
-						<p>+50</p>
-						<span>clientas felices</span>
+				<div class="absolute right-5 bottom-5">
+					<div class="text-center border-greensea-custom2 mb-7">
+						<p class="text-7xl font-semibold text-greensea-custom2">+50</p>
+						<span class="text-greensea-custom2">clientas felices</span>
 					</div>
-					<div>
-						<p>+50</p>
-						<span>clientas felices</span>
+					<hr class="border-greensea-custom2 mb-4">
+					<div class="text-center mb-7">
+						<p class="text-7xl font-semibold text-greensea-custom2">+10</p>
+						<span class="text-greensea-custom2">certificaciones</span>
 					</div>
-					<div>
-						<Icon name="mdi:facebook" />
-						<Icon name="mdi:instagram" />
+					<div class="flex items-center justify-center gap-3">
+						<a href=""><Icon name="mdi:facebook" class="text-greensea-custom2 w-[40px]" /></a>
+						<a href=""><Icon name="mdi:instagram" class="text-greensea-custom2 w-[40px]" /></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+	<section class="mt-32" id="trigger">
+		<div class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] mt-10">
+			<ul class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-marquee slide">
+				<li>
+					<img src="/img/slide1.webp" alt="" />
+				</li>
+				<li>
+					<img src="/img/slide2.jpg" alt="" />
+				</li>
+				<li>
+					<img src="/img/slide3.jpg" alt="" />
+				</li>
+				<li>
+					<img src="/img/slide4.jpeg" alt="" />
+				</li>
+				<li>
+					<img src="/img/slide5.webp" alt="" />
+				</li>
+			</ul>
+		</div>		
+		<div class="text-center mt-10">
+			<h1 class="text-dark-custom text-4xl font-bold">¿Lista para tu transformación? </h1>
+			<p class="text-dark-custom font-light my-5">Contáctame por WhatsApp <br> y agendemos tu cita.</p>
+			<button class="btn-whatsapp"><Icon name="ic:baseline-whatsapp" /> Contactar ahora</button>
+		</div>
+		<div class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] mt-10">
+			<ul class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-marquee slide">
+				<li>
+					<img src="/img/slide1.webp" alt="" />
+				</li>
+				<li>
+					<img src="/img/slide2.jpg" alt="" />
+				</li>
+				<li>
+					<img src="/img/slide3.jpg" alt="" />
+				</li>
+				<li>
+					<img src="/img/slide4.jpeg" alt="" />
+				</li>
+				<li>
+					<img src="/img/slide5.webp" alt="" />
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="mt-32">
+		<div class="text-center mb-10">
+			<h2 class="text-3xl font-light text-dark-custom">Descubre las impresionantes transformaciones</h2>
+			<h1 class="text-3xl font-semibold text-greensea-custom">de belleza de nuestras clientas.</h1>
+		</div>
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-5">
+			<div class="grid gap-4">
+				<div>
+					<img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+				</div>
+				<div>
+					<img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+				</div>
+				<div>
+					<img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
+				</div>
+			</div>
+			<div class="grid gap-4">
+				<div>
+					<img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
+				</div>
+				<div>
+					<img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
+				</div>
+				<div>
+					<img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
+				</div>
+			</div>
+			<div class="grid gap-4">
+				<div>
+					<img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
+				</div>
+				<div>
+					<img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
+				</div>
+				<div>
+					<img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
+				</div>
+			</div>
+			<div class="grid gap-4">
+				<div>
+					<img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
+				</div>
+				<div>
+					<img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
+				</div>
+				<div>
+					<img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<footer class="bg-greensea-custom mt-10">
+		<div class="mx-auto w-full max-w-screen-xl">
+			<div class="px-4 py-6 text-center">
+				<div class="flex items-center justify-center mt-4 space-x-2">
+					<a href=""><Icon name="mdi:facebook" class="text-greensea-custom2 w-[30px]" /></a>
+					<a href=""><Icon name="mdi:instagram" class="text-greensea-custom2 w-[30px]" /></a>
+				</div>
+				<span class="text-[12px] text-white sm:text-center">© 2024 Esme Studio. Todos los derechos reservados.
+				</span>				
+			</div>
+		</div>
+	</footer>
+
 
 	<!-- Main modal -->
 	<dialog id="my_modal_3" class="modal modal-bottom sm:modal-middle">
@@ -191,48 +265,26 @@ import { Icon } from 'astro-iconify'
 			</p>
 	</div>
 	</dialog>
+
+	<!-- Modal -->
+	<div id="imageModal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 hidden justify-center items-center">
+		<span id="closeModal" class="absolute text-white text-3xl cursor-pointer w-10"><Icon name="heroicons:x-mark" /></span>
+		<img id="modalImage" class="max-w-full max-h-full">
+		<button id="prevImage" class="absolute left-5 text-white text-3xl cursor-pointer"><Icon name="heroicons:chevron-left" /></button>
+		<button id="nextImage" class="absolute right-5 text-white text-3xl cursor-pointer"><Icon name="heroicons:chevron-right" /></button>
+	</div>
 </Layout>
 
 <style>
 	.icon-sm {
 		width: 22px;
-	} 
-	.icon-md {
-		width: 35px;
-	}
+	} 	
 	.btn-greensea {
 		border-radius: 9999px;
 		background-color: #95d2b3;
 		color: #fff;
 		border: none;
-	}
-	.nav-item2 {
-		position: relative;
-		text-align: center;
-	}
-    .nav-item2 a {
-        background-color: transparent !important;
-        transition: all 0.3s ease;
-        color: #fff;
-		padding-block: 20px;
-		font-size: 20px;
-    }
-    .nav-item2 a:hover {
-        text-shadow: #f7f7f7 0px 0px 10px;
-    }
-    .nav-item2 a.active {
-        text-shadow: #f7f7f7 0px 0px 10px;
-    }
-	.nav-item2:focus-visible {
-		outline: none !important;
-	}
-	.nav-item2 a:focus-visible {
-		outline: none !important;
-	}
-	.drawer-overlay {
-		width: 40px !important;
-		margin-bottom: 30px;
-	}
+	}		
 	.section-btn-whatsapp {
 		position: fixed;
 		display: flex;
@@ -240,15 +292,30 @@ import { Icon } from 'astro-iconify'
 		justify-content: center;
 		font-size: 15px;
 		color: #fff;
-		bottom: 20px;
-		right: 0;
+		bottom: 30px;
+		left: 0;
 		z-index: 9999;
 		background-color: #44C861;
 		padding: 10px;
-		border-radius: 999px 0px 0px 999px;
+		border-radius: 0px 999px 999px 0px;
+	}
+	.section-btn-whatsapp a {
+		width: 40px;
 	}
 	.btn-whatsapp {
-		width: 40px;
+		background-color: #44C861;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+		width: auto;
+		border-radius: 999px;
+		padding: 10px 30px;
+		gap: 10px;
+	}
+	.btn-whatsapp svg {
+		width: 35px;
 	}
 	.tabs-mod {
 		height: 45px;
@@ -271,7 +338,46 @@ import { Icon } from 'astro-iconify'
 		padding: 10px 20px;
 		border-radius: 999px;
 		color: #fff;
-	}	
+	}
+	.slide img {
+		width: 250px;
+		height: 150px;
+		object-fit: cover;
+		border-radius: 16px;
+	}
+	.hidden {
+		display: none;
+	}
+	#prevImage, #nextImage {
+		background: none;
+		border: none;
+		font-size: 50px;
+		padding: 0px;
+		cursor: pointer;
+		user-select: none;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	#prevImage svg, #nextImage svg {
+		width: 50px;
+	}
+	#prevImage:hover, #nextImage:hover {
+		color: lightgray;
+	}
+	#closeModal {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		font-size: 40px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	#imageModal {
+		z-index: 9999 !important;
+		background-color: #252422d7;
+		backdrop-filter: blur(3px);
+	}
 </style>
 
 <script>
@@ -289,5 +395,63 @@ import { Icon } from 'astro-iconify'
 
 		})
 		
+	});
+
+	document.addEventListener("DOMContentLoaded", () => {
+		const triggerElement = document.getElementById('trigger');
+		const elementToHide = document.getElementById('element-to-hide');
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				elementToHide.classList.add('hidden');
+			} else {
+				elementToHide.classList.remove('hidden');
+			}
+			});
+		});
+
+		observer.observe(triggerElement);
+	});
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const images = document.querySelectorAll('.grid img');
+		const modal = document.getElementById('imageModal');
+		const modalImage = document.getElementById('modalImage');
+		const closeModal = document.getElementById('closeModal');
+		const prevImage = document.getElementById('prevImage');
+		const nextImage = document.getElementById('nextImage');
+
+		let currentImageIndex = 0;
+
+		images.forEach((image, index) => {
+			image.addEventListener('click', () => {
+			currentImageIndex = index;
+			modalImage.src = images[currentImageIndex].src;
+			modal.style.display = 'flex';
+			});
+		});
+
+		closeModal.addEventListener('click', () => {
+			modal.style.display = 'none';
+		});
+
+		modal.addEventListener('click', (e) => {
+			if (e.target === modal) {
+			modal.style.display = 'none';
+			}
+		});
+
+		prevImage.addEventListener('click', (e) => {
+			e.stopPropagation();
+			currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+			modalImage.src = images[currentImageIndex].src;
+		});
+
+		nextImage.addEventListener('click', (e) => {
+			e.stopPropagation();
+			currentImageIndex = (currentImageIndex + 1) % images.length;
+			modalImage.src = images[currentImageIndex].src;
+		});
 	});
 </script>

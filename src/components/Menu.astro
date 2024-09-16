@@ -1,0 +1,84 @@
+---
+import Icon from "astro-iconify";
+---
+
+<nav class="navbar bg-white sticky top-0 z-50">
+    <div class="w-full px-2">
+        <div class="w-1/2 flex items-center justify-start">
+            <a class="w-[40px] block"><img src="/img/esme-logo.svg" alt=""></a>
+        </div>
+        <div class="w-1/2 flex items-center justify-end">
+            <div class="drawer">
+                <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                <div class="drawer-content flex items-center justify-end">
+                    <label for="my-drawer" class="drawer-button"><Icon id="my-drawer" name="heroicons:bars-3" class="text-black icon-md" /></label>
+                </div>
+                <div class="drawer-side">
+                    <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                    <div class="capa"></div>
+                    <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4 flex justify-center items-center">
+                        <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"><Icon name="heroicons:x-mark" class="text-3xl"/></label>
+                        <li class="nav-item2"><a>Inicio</a></li>
+                        <li class="nav-item2"><a>Sevicios</a></li>
+                        <li class="nav-item2"><a>Quien soy</a></li>
+                        <li class="nav-item2"><a>Galeria</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>				
+    </div>
+    <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+        <li><a>Item 1</a></li>
+        <li>
+            <details>
+            <summary>Parent</summary>
+            <ul class="p-2">
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+            </ul>
+            </details>
+        </li>
+        <li><a>Item 3</a></li>
+        </ul>
+    </div>
+</nav>
+
+<style>
+    .icon-md {
+		width: 35px;
+	}
+    .nav-item2 {
+		position: relative;
+		text-align: center;
+	}
+    .nav-item2 a {
+        background-color: transparent !important;
+        transition: all 0.3s ease;
+        color: #fff;
+		padding-block: 20px;
+		font-size: 20px;
+    }
+    .nav-item2 a:hover {
+        text-shadow: #f7f7f7 0px 0px 10px;
+    }
+    .nav-item2 a.active {
+        text-shadow: #f7f7f7 0px 0px 10px;
+    }
+	.nav-item2:focus-visible {
+		outline: none !important;
+	}
+	.nav-item2 a:focus-visible {
+		outline: none !important;
+	}
+    .drawer-overlay {
+		width: 40px !important;
+		margin-bottom: 30px;        
+	}
+    .capa {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
+</style>
