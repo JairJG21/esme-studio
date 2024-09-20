@@ -12,13 +12,13 @@ export default {
 				'dark-custom': '#252422',
 			},
 			animation: {
-				marquee: "marquee 20s linear infinite",
+				marquee: "marquee 15s linear infinite alternate",
 				
 			},
 			keyframes: {
 				marquee: {
 					from: { transform: "translateX(0%)" },
-					to: { transform: "translateX(calc(-100% - 10px))" },
+					to: { transform: "translateX(calc(-100% + 350px))" },
 				},
 				
 			},

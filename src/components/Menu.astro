@@ -14,14 +14,14 @@ import Icon from "astro-iconify";
                     <label for="my-drawer" class="drawer-button"><Icon id="my-drawer" name="heroicons:bars-3" class="text-black icon-md" /></label>
                 </div>
                 <div class="drawer-side">
-                    <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
                     <div class="capa"></div>
+                    <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
                     <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4 flex justify-center items-center">
                         <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"><Icon name="heroicons:x-mark" class="text-3xl"/></label>
-                        <li class="nav-item2"><a>Inicio</a></li>
-                        <li class="nav-item2"><a>Sevicios</a></li>
-                        <li class="nav-item2"><a>Quien soy</a></li>
-                        <li class="nav-item2"><a>Galeria</a></li>
+                        <li class="nav-item2"><a href="#inicio" onclick="document.getElementById('my-drawer').checked = false;">Inicio</a></li>
+                        <li class="nav-item2"><a href="#servicios" onclick="document.getElementById('my-drawer').checked = false;">Sevicios</a></li>
+                        <li class="nav-item2"><a href="#quiensoy" onclick="document.getElementById('my-drawer').checked = false;">Quien soy</a></li>
+                        <li class="nav-item2"><a href="#galeria" onclick="document.getElementById('my-drawer').checked = false;">Galeria</a></li>
                     </ul>
                 </div>
             </div>
@@ -29,17 +29,10 @@ import Icon from "astro-iconify";
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-        <li><a>Item 1</a></li>
-        <li>
-            <details>
-            <summary>Parent</summary>
-            <ul class="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
-            </ul>
-            </details>
-        </li>
-        <li><a>Item 3</a></li>
+            <li class="nav-item2"><a href="#inicio">Inicio</a></li>
+            <li class="nav-item2"><a href="#servicios">Sevicios</a></li>
+            <li class="nav-item2"><a href="#quiensoy">Quien soy</a></li>
+            <li class="nav-item2"><a href="#galeria">Galeria</a></li>
         </ul>
     </div>
 </nav>
@@ -47,7 +40,11 @@ import Icon from "astro-iconify";
 <style>
     .icon-md {
 		width: 35px;
+        transition: all 0.2s ease-in-out;
 	}
+    .icon-md:hover {
+        transform: scale(1.05);
+    }
     .nav-item2 {
 		position: relative;
 		text-align: center;
@@ -73,12 +70,19 @@ import Icon from "astro-iconify";
 	}
     .drawer-overlay {
 		width: 40px !important;
-		margin-bottom: 30px;        
+		margin-bottom: 30px;
+        transition: all 0.2s ease-in-out;
 	}
+    .drawer-overlay:hover {
+        transform: scale(1.1);
+        text-shadow: #f7f7f7 0px 0px 10px;
+    }
     .capa {
         position: fixed;
         inset: 0;
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 0;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
     }
 </style>

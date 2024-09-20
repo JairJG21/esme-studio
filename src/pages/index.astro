@@ -7,13 +7,13 @@ import { Icon } from 'astro-iconify'
 
 <Layout title="Esme Studio">
 	<div class="section-btn-whatsapp" id="element-to-hide">
-		<a><Icon name="ic:baseline-whatsapp" /> <span class="hidden md:block">Agendar Cita</span></a>
+		<a href="https://wa.me/7201844426?text=Hola,%20me%20gustaría%20agendar%20una%20cita"><Icon name="ic:baseline-whatsapp" /> Agendar Cita</a>
 	</div>
 	<div id="alert-1" class="flex items-center p-4 text-white bg-greensea-custom" role="alert">
 		<Icon name="heroicons:calendar-date-range" class="icon-sm" />
 		<span class="sr-only">Info</span>
 		<div class="ms-3 text-sm font-medium">
-			<a href="#" class="font-semibold underline hover:no-underline">Reserva tu proxima cita con nosotros</a>
+			<a href="https://wa.me/7201844426?text=Hola,%20me%20gustaría%20agendar%20una%20cita" class="font-semibold underline hover:no-underline">Reserva tu proxima cita con nosotros</a>
 		</div>
 		<button type="button" class="ms-auto -mx-1.5 -my-1.5 inline-flex items-center justify-center h-6 w-6" data-dismiss-target="#alert-1" aria-label="Close">
 			<span class="sr-only">Close</span>
@@ -22,7 +22,7 @@ import { Icon } from 'astro-iconify'
 	</div>
 	<Menu />
 	<section class="h-[550px]">
-		<div id="default-carousel" class="relative w-full h-full" data-carousel="slide">
+		<div id="default-carousel" class="relative w-full h-full" data-carousel="slide" data-carousel-interval="7000">
 			<div class="relative h-full overflow-hidden md:h-96">
 				<div class="hidden duration-700 ease-in-out" data-carousel-item>
 					<img src="/img/carousel_1.webp" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
@@ -30,16 +30,16 @@ import { Icon } from 'astro-iconify'
 					<div class="absolute inset-0 flex items-center justify-center flex-col px-5 text-center">
 						<h1 class="text-white text-4xl font-bold">¡Renueva tu belleza con nosotros!</h1>
 						<p class="text-white textarea-md">Reserva tu cita y descrube nuestra magia.</p>
-						<a class="btn btn-greensea" href="">Conocer Servicios</a>
+						<a class="btn btn-greensea" href="https://wa.me/7201844426?text=Hola,%20me%20gustaría%20agendar%20una%20cita">Quiero una cita</a>
 					</div>
 				</div>
 				<div class="hidden duration-700 ease-in-out" data-carousel-item>
-					<img src="/img/carousel_2.jpeg" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+					<img src="/img/carousel_2.webp" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
 					<div class="absolute inset-0 bg-black/65"></div>
 					<div class="absolute inset-0 flex items-center justify-center flex-col px-5 text-center">
-						<h1 class="text-white text-4xl font-bold">¡Renueva tu belleza con nosotros!</h1>
-						<p class="text-white textarea-md">Reserva tu cita y descrube nuestra magia.</p>
-						<a class="btn btn-greensea" href="">Conocer Servicios</a>
+						<h1 class="text-white text-4xl font-bold">¡Felices Fiestas Patrias!</h1>
+						<p class="text-white textarea-md">Renueva tu estilo y brilla con orgullo patrio. Conoce las promociones que tenemos para ti.</p>
+						<a class="btn btn-greensea" href="#servicios">Conocer Promociones</a>
 					</div>
 				</div>
 			</div>
@@ -65,7 +65,7 @@ import { Icon } from 'astro-iconify'
 			</button>
 		</div>
 	</section>
-	<section>
+	<section id="servicios" class="scroll-mt-20">
 		<div class="w-full text-center mt-10">
 			<h1 class="text-3xl text-dark-custom font-bold">Servicios</h1>
 		</div>
@@ -124,7 +124,7 @@ import { Icon } from 'astro-iconify'
 				<p class="text-center text-white mt-5 font-light">Mi misión es ayudarte a descubrir y realzar tu belleza única a través de técnicas personalizadas y un enfoque artístico. Creo que cada persona merece sentirse segura y hermosa en su propia piel, y es un honor para mí ser parte de ese viaje.</p>
 			</div>
 			<div class="w-full">
-				<div class="absolute right-5 bottom-5">
+				<div class="absolute right-5 bottom-5 z-10">
 					<div class="text-center border-greensea-custom2 mb-7">
 						<p class="text-7xl font-semibold text-greensea-custom2">+50</p>
 						<span class="text-greensea-custom2">clientas felices</span>
@@ -192,7 +192,7 @@ import { Icon } from 'astro-iconify'
 			<h2 class="text-3xl font-light text-dark-custom">Descubre las impresionantes transformaciones</h2>
 			<h1 class="text-3xl font-semibold text-greensea-custom">de belleza de nuestras clientas.</h1>
 		</div>
-		<div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-5">
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-5 gallery">
 			<div class="grid gap-4">
 				<div>
 					<img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
@@ -293,14 +293,27 @@ import { Icon } from 'astro-iconify'
 		font-size: 15px;
 		color: #fff;
 		bottom: 30px;
-		left: 0;
+		left: -130px;
 		z-index: 9999;
 		background-color: #44C861;
 		padding: 10px;
 		border-radius: 0px 999px 999px 0px;
+		transition: all 0.5s ease-in-out;
+	}
+	.section-btn-whatsapp a > svg {
+		width: 50px;
 	}
 	.section-btn-whatsapp a {
-		width: 40px;
+		width: auto;
+		gap: 10px;
+		font-size: 18px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row-reverse;
+	}
+	.section-btn-whatsapp:hover {
+		left: 0;
 	}
 	.btn-whatsapp {
 		background-color: #44C861;
@@ -378,9 +391,16 @@ import { Icon } from 'astro-iconify'
 		background-color: #252422d7;
 		backdrop-filter: blur(3px);
 	}
+	.gallery img {
+		transition: all 0.2s ease-in-out;
+	}
+	.gallery img:hover {
+		transform: scale(1.05);
+	}
 </style>
 
 <script>
+
 	let tabs = document.querySelectorAll('#default-styled-tab > li > button');
 
 	tabs.forEach(element => {
