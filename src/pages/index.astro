@@ -1,6 +1,6 @@
 ---
-import Card from '../components/Card.astro';
 import Menu from '../components/Menu.astro';
+import Servicios from '../components/Servicios.astro';
 import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-iconify'
 ---
@@ -27,7 +27,7 @@ import { Icon } from 'astro-iconify'
 				<div class="hidden duration-700 ease-in-out" data-carousel-item>
 					<img src="/img/carousel_1.webp" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
 					<div class="absolute inset-0 bg-black/65"></div>
-					<div class="absolute inset-0 flex items-center justify-center flex-col px-5 text-center">
+					<div class="absolute inset-0 flex items-center justify-center flex-col px-2 text-center">
 						<h1 class="text-white text-4xl font-bold">¡Renueva tu belleza con nosotros!</h1>
 						<p class="text-white textarea-md">Reserva tu cita y descrube nuestra magia.</p>
 						<a class="btn btn-greensea" href="https://wa.me/7201844426?text=Hola,%20me%20gustaría%20agendar%20una%20cita">Quiero una cita</a>
@@ -36,14 +36,14 @@ import { Icon } from 'astro-iconify'
 				<div class="hidden duration-700 ease-in-out" data-carousel-item>
 					<img src="/img/carousel_2.webp" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
 					<div class="absolute inset-0 bg-black/65"></div>
-					<div class="absolute inset-0 flex items-center justify-center flex-col px-5 text-center">
+					<div class="absolute inset-0 flex items-center justify-center flex-col px-2 text-center">
 						<h1 class="text-white text-4xl font-bold">¡Felices Fiestas Patrias!</h1>
 						<p class="text-white textarea-md">Renueva tu estilo y brilla con orgullo patrio. Conoce las promociones que tenemos para ti.</p>
 						<a class="btn btn-greensea" href="#servicios">Conocer Promociones</a>
 					</div>
 				</div>
 			</div>
-			<div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+			<div class="absolute points_carousel z-30 flex -translate-x-1/2 left-1/2 space-x-3 rtl:space-x-reverse">
 				<button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
 				<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
 			</div>
@@ -65,53 +65,7 @@ import { Icon } from 'astro-iconify'
 			</button>
 		</div>
 	</section>
-	<section id="servicios" class="scroll-mt-20">
-		<div class="w-full text-center mt-10">
-			<h1 class="text-3xl text-dark-custom font-bold">Servicios</h1>
-		</div>
-		<div class="mb-4 mt-5 ps-5">
-			<ul class="flex flex-wrap -mb-px text-sm font-medium text-center tabs-mod" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" role="tablist">
-				<li class="me-2" role="presentation">
-					<button class="inline-block active" id="v1-styled-tab" data-tabs-target="#styled-v1" type="button" role="tab" aria-controls="v1" aria-selected="true">Promociones</button>
-				</li>
-				<li class="me-2" role="presentation">
-					<button class="inline-block" id="v2-styled-tab" data-tabs-target="#styled-v2" type="button" role="tab" aria-controls="v2" aria-selected="false">Acido Glicolico</button>
-				</li>
-				<li class="me-2" role="presentation">
-					<button class="inline-block" id="v3-styled-tab" data-tabs-target="#styled-v3" type="button" role="tab" aria-controls="v3" aria-selected="false">Radiografia Facial</button>
-				</li>
-				<li class="me-2" role="presentation">
-					<button class="inline-block" id="v4-styled-tab" data-tabs-target="#styled-v4" type="button" role="tab" aria-controls="v4" aria-selected="false">Dermapen</button>
-				</li>
-				<li class="me-2" role="presentation">
-					<button class="inline-block" id="v5-styled-tab" data-tabs-target="#styled-v5" type="button" role="tab" aria-controls="v5" aria-selected="false">Micropigmentacion</button>
-				</li>
-				<li class="me-5" role="presentation">
-					<button class="inline-block" id="v6-styled-tab" data-tabs-target="#styled-v6" type="button" role="tab" aria-controls="v6" aria-selected="false">Delineado</button>
-				</li>
-			</ul>
-		</div>
-		<div id="default-styled-tab-content">
-			<div class="hidden pt-3 px-5" id="styled-v1" role="tabpanel" aria-labelledby="v1-tab">
-				<Card/>
-			</div>
-			<div class="hidden pt-3 px-5" id="styled-v2" role="tabpanel" aria-labelledby="v2-tab">
-				<Card/>
-			</div>
-			<div class="hidden pt-3 px-5" id="styled-v3" role="tabpanel" aria-labelledby="v3-tab">
-				<Card/>
-			</div>
-			<div class="hidden pt-3 px-5" id="styled-v4" role="tabpanel" aria-labelledby="v4-tab">
-				<Card/>
-			</div>
-			<div class="hidden pt-3 px-5" id="styled-v5" role="tabpanel" aria-labelledby="v5-tab">
-				<Card/>
-			</div>
-			<div class="hidden pt-3 px-5" id="styled-v6" role="tabpanel" aria-labelledby="v6-tab">
-				<Card/>
-			</div>
-		</div>
-	</section>
+	<Servicios/>
 	<section>
 		<div class="bg-greensea-custom mt-20 relative px-5 py-10 h-[900px]">
 			<img class="absolute bottom-0 -left-12 w-[300px]" src="/img/esme.png" alt="">
@@ -126,7 +80,7 @@ import { Icon } from 'astro-iconify'
 			<div class="w-full">
 				<div class="absolute right-5 bottom-5 z-10">
 					<div class="text-center border-greensea-custom2 mb-7">
-						<p class="text-7xl font-semibold text-greensea-custom2">+50</p>
+						<p class="text-7xl font-semibold text-greensea-custom2">+70</p>
 						<span class="text-greensea-custom2">clientas felices</span>
 					</div>
 					<hr class="border-greensea-custom2 mb-4">
@@ -135,8 +89,8 @@ import { Icon } from 'astro-iconify'
 						<span class="text-greensea-custom2">certificaciones</span>
 					</div>
 					<div class="flex items-center justify-center gap-3">
-						<a href=""><Icon name="mdi:facebook" class="text-greensea-custom2 w-[40px]" /></a>
-						<a href=""><Icon name="mdi:instagram" class="text-greensea-custom2 w-[40px]" /></a>
+						<a href="https://www.facebook.com/esme.espinoza04" target="_blank"><Icon name="mdi:facebook" class="text-greensea-custom2 w-[40px]" /></a>
+						<a href="https://www.instagram.com/esmealca31/" target="_blank"><Icon name="mdi:instagram" class="text-greensea-custom2 w-[40px]" /></a>
 					</div>
 				</div>
 			</div>
@@ -165,7 +119,7 @@ import { Icon } from 'astro-iconify'
 		<div class="text-center mt-10">
 			<h1 class="text-dark-custom text-4xl font-bold">¿Lista para tu transformación? </h1>
 			<p class="text-dark-custom font-light my-5">Contáctame por WhatsApp <br> y agendemos tu cita.</p>
-			<button class="btn-whatsapp"><Icon name="ic:baseline-whatsapp" /> Contactar ahora</button>
+			<a class="btn-whatsapp" href="https://wa.me/7201844426?text=Hola,%20me%20gustaría%20agendar%20una%20cita"><Icon name="ic:baseline-whatsapp" /> Contactar ahora</a>
 		</div>
 		<div class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] mt-10">
 			<ul class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-marquee slide">
@@ -244,8 +198,8 @@ import { Icon } from 'astro-iconify'
 		<div class="mx-auto w-full max-w-screen-xl">
 			<div class="px-4 py-6 text-center">
 				<div class="flex items-center justify-center mt-4 space-x-2">
-					<a href=""><Icon name="mdi:facebook" class="text-greensea-custom2 w-[30px]" /></a>
-					<a href=""><Icon name="mdi:instagram" class="text-greensea-custom2 w-[30px]" /></a>
+					<a href="https://www.facebook.com/esme.espinoza04"><Icon name="mdi:facebook" class="text-white w-[35px]" /></a>
+					<a href="https://www.instagram.com/esmealca31/"><Icon name="mdi:instagram" class="text-white w-[35px]" /></a>
 				</div>
 				<span class="text-[12px] text-white sm:text-center">© 2024 Esme Studio. Todos los derechos reservados.
 				</span>				
@@ -292,7 +246,7 @@ import { Icon } from 'astro-iconify'
 		justify-content: center;
 		font-size: 15px;
 		color: #fff;
-		bottom: 10px;
+		bottom: 20px;
 		left: 0px;
 		z-index: 9999;
 		background-color: #44C861;
@@ -301,7 +255,7 @@ import { Icon } from 'astro-iconify'
 		transition: all 0.5s ease-in-out;
 	}
 	.section-btn-whatsapp a > svg {
-		width: 50px;
+		width: 45px;
 	}
 	.section-btn-whatsapp a {
 		width: auto;
@@ -315,7 +269,7 @@ import { Icon } from 'astro-iconify'
 	.btn-whatsapp {
 		background-color: #44C861;
 		color: #fff;
-		display: flex;
+		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 		margin: auto;
@@ -326,29 +280,7 @@ import { Icon } from 'astro-iconify'
 	}
 	.btn-whatsapp svg {
 		width: 35px;
-	}
-	.tabs-mod {
-		height: 45px;
-		overflow: scroll;
-		display: flex;
-		align-items: center;
-		justify-content: start;
-		flex-wrap: nowrap;
-	}
-	.tabs-mod li button {
-		border: solid 1px #95d2b3;
-		padding: 10px 20px;
-		border-radius: 999px;
-		color: #95d2b3;
-		transition: all 0.2s ease;
-		white-space: nowrap;
-	}
-	.tabs-mod li button.active {
-		background-color: #95d2b3;
-		padding: 10px 20px;
-		border-radius: 999px;
-		color: #fff;
-	}
+	}	
 	.slide img {
 		width: 250px;
 		height: 150px;
@@ -407,25 +339,16 @@ import { Icon } from 'astro-iconify'
 		bottom: 20px;
 		right: 20px;
 	}
+	.points_carousel {
+		bottom: 33px;
+	}
+	.points_carousel button.bg-white {
+		width: 30px;
+		transition: all 0.3s ease-in-out;
+	}
 </style>
 
-<script>
-
-	let tabs = document.querySelectorAll('#default-styled-tab > li > button');
-
-	tabs.forEach(element => {
-		
-		element.addEventListener('click' , () => {
-
-			tabs.forEach(element => {
-				element.classList.remove('active');
-			});
-
-			element.classList.add('active');
-
-		})
-		
-	});
+<script>	
 
 	document.addEventListener("DOMContentLoaded", () => {
 		const triggerElement = document.getElementById('trigger');

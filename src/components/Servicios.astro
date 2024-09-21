@@ -1,0 +1,89 @@
+---
+import Card from "./Card.astro";
+
+import { promises as fs } from 'fs';
+import path from 'path';
+
+const jsonFilePath = path.resolve('public/data/data.json');
+
+const jsonData = await fs.readFile(jsonFilePath, 'utf-8');
+const services = JSON.parse(jsonData);
+
+const targetCategory = 'Promociones';
+
+const category = [...new Set(services.map(service => service.categoria))];
+const oneServices = services.filter(service => service.category === targetCategory);
+
+---
+
+<section id="servicios" class="scroll-mt-20">
+    <div class="w-full text-center mt-10">
+        <h1 class="text-3xl text-dark-custom font-bold">Servicios</h1>
+    </div>
+    <div class="mb-4 mt-5 ps-5">
+        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center tabs-mod" id="tabs-services" data-tabs-toggle="#tabs-services-action" role="tablist">
+            {category.map((category, index) => (
+                <li class="me-2" role="presentation">
+                <button class={`inline-block ${index === 0 ? 'active' : ''}`} id={`${category}-styled-tab`} data-tabs-target={`#styled-${category}`} type="button" role="tab" aria-selected="true">{category}</button>
+            </li>
+            ))}            
+        </ul>
+    </div>
+    <div id="tabs-services-action">
+        {oneServices.map(service => (
+            <div class="hidden pt-3 px-5" id={`styled-${service.titulo.replace(/\s+/g, '')}`} role="tabpanel" aria-labelledby={`${service.titulo.replace(/\s+/g, '')}-tab`}>
+                <Card 
+                    imagen={`${service.imagen}`}
+                    precio_anterior={`${service.precio_anterior}`}
+                    precio_nuevo={`${service.precio_nuevo}`}
+                    titulo={`${service.titulo}`}
+                    descripcion_corta={`${service.descripcion_corta}`}
+                    descripcion_larga={`${service.descripcion_larga}`}
+                    accion_whatsapp={`${service.accion_whatsapp}`} />
+            </div>
+        ))}
+    </div>
+</section>
+
+<style>
+    .tabs-mod {
+		height: 45px;
+		overflow: scroll;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		flex-wrap: nowrap;
+	}
+	.tabs-mod li button {
+		border: solid 1px #95d2b3;
+		padding: 10px 20px;
+		border-radius: 999px;
+		color: #95d2b3;
+		transition: all 0.2s ease;
+		white-space: nowrap;
+	}
+	.tabs-mod li button.active {
+		background-color: #95d2b3;
+		padding: 10px 20px;
+		border-radius: 999px;
+		color: #fff;
+	}
+</style>
+
+<script>
+  let tabs = document.querySelectorAll('#tabs-services > li > button');
+
+  tabs.forEach(element => {
+      
+      element.addEventListener('click' , () => {
+
+          tabs.forEach(element => {
+              element.classList.remove('active');
+          });
+
+          element.classList.add('active');
+
+      })
+      
+  });
+</script>

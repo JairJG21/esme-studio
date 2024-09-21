@@ -1,23 +1,31 @@
 ---
 import Icon from "astro-iconify";
-const { precio_anterior } = Astro.props;
+const { 
+    imagen,
+    precio_anterior,
+    precio_nuevo,
+    titulo,
+    descripcion_corta,
+    descripcion_larga,
+    accion_whatsapp
+    } = Astro.props;
 ---
 <div class="card-servicio w-full">
     <div>
-        <img src="/img/carousel_1.webp" alt="">
+        <img src={imagen} alt="">
     </div>
     <div class="info-servicio">
-        <span>$1800</span>
-        <h2>$1440</h2>
-        <h4>Acido Glicólico + Radiofrecuencia Facial </h4>
-        <p>Lorem ipsum dolor sit amet consectetur. Ultrices cras et duis leo. In porttitor lacus lectus viverra ut molestie.</p>
+        <span>{precio_anterior}</span>
+        <h2>{precio_nuevo}</h2>
+        <h4>{titulo}</h4>
+        <p>{descripcion_corta}</p>
         <div class="btn-group mt-5">
             <button class="btn1" data-tooltip-target="tooltip-animation" onclick="my_modal_3.showModal()"><Icon name="heroicons:eye" /></button>
             <div id="tooltip-animation" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                 Conocer mas
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
-            <button class="btn2">Agenda Cita</button>
+            <a class="btn2" href={accion_whatsapp} target="_blank">Agenda Cita</a>
         </div>
         
     </div>
@@ -79,6 +87,9 @@ const { precio_anterior } = Astro.props;
         font-weight: 300;
         padding-inline: 12px;
         color: #95d2b3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     button, a {
         transition: all 0.2s ease-in-out !important;
