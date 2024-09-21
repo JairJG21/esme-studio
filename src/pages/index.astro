@@ -7,7 +7,7 @@ import { Icon } from 'astro-iconify'
 
 <Layout title="Esme Studio">
 	<div class="section-btn-whatsapp" id="element-to-hide">
-		<a href="https://wa.me/7201844426?text=Hola,%20me%20gustaría%20agendar%20una%20cita"><Icon name="ic:baseline-whatsapp" /> Agendar Cita</a>
+		<a href="https://wa.me/7201844426?text=Hola,%20me%20gustaría%20agendar%20una%20cita"><Icon name="ic:baseline-whatsapp" /></a>
 	</div>
 	<div id="alert-1" class="flex items-center p-4 text-white bg-greensea-custom" role="alert">
 		<Icon name="heroicons:calendar-date-range" class="icon-sm" />
@@ -47,16 +47,16 @@ import { Icon } from 'astro-iconify'
 				<button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
 				<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
 			</div>
-			<button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-				<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+			<button type="button" class="absolute btn_carousel top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+				<span class="inline-flex btn_prev items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
 					<svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
 						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
 					</svg>
 					<span class="sr-only">Previous</span>
 				</span>
 			</button>
-			<button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-				<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+			<button type="button" class="absolute btn_carousel top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+				<span class="inline-flex btn_next items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
 					<svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
 						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
 					</svg>
@@ -292,8 +292,8 @@ import { Icon } from 'astro-iconify'
 		justify-content: center;
 		font-size: 15px;
 		color: #fff;
-		bottom: 30px;
-		left: -130px;
+		bottom: 10px;
+		left: 0px;
 		z-index: 9999;
 		background-color: #44C861;
 		padding: 10px;
@@ -311,9 +311,6 @@ import { Icon } from 'astro-iconify'
 		align-items: center;
 		justify-content: center;
 		flex-direction: row-reverse;
-	}
-	.section-btn-whatsapp:hover {
-		left: 0;
 	}
 	.btn-whatsapp {
 		background-color: #44C861;
@@ -396,6 +393,19 @@ import { Icon } from 'astro-iconify'
 	}
 	.gallery img:hover {
 		transform: scale(1.05);
+	}
+	.btn_carousel {
+		width: 100%;
+	}
+	.btn_carousel .btn_prev {
+		position: absolute;
+		bottom: 20px;
+		right: 80px;
+	}
+	.btn_carousel .btn_next {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
 	}
 </style>
 
