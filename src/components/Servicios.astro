@@ -12,7 +12,13 @@ const services = JSON.parse(jsonData);
 const targetCategory = 'Promociones';
 
 const category = [...new Set(services.map(service => service.categoria))];
-const oneServices = services.filter(service => service.category === targetCategory);
+const oneServices = services.filter(service => service.categoria === targetCategory);
+
+function consultaServicio() {
+
+    console.log('hola');
+
+}
 
 ---
 
@@ -20,18 +26,18 @@ const oneServices = services.filter(service => service.category === targetCatego
     <div class="w-full text-center mt-10">
         <h1 class="text-3xl text-dark-custom font-bold">Servicios</h1>
     </div>
-    <div class="mb-4 mt-5 ps-5">
+    <div class="mt-5 ps-5">
         <ul class="flex flex-wrap -mb-px text-sm font-medium text-center tabs-mod" id="tabs-services" data-tabs-toggle="#tabs-services-action" role="tablist">
             {category.map((category, index) => (
                 <li class="me-2" role="presentation">
-                <button class={`inline-block ${index === 0 ? 'active' : ''}`} id={`${category}-styled-tab`} data-tabs-target={`#styled-${category}`} type="button" role="tab" aria-selected="true">{category}</button>
-            </li>
+                    <button data-carga={consultaServicio()} class={`inline-block btn-filtro-servicio ${index === 0 ? 'active' : ''}`} id={`${category}-styled-tab`} data-tabs-target={`#styled-${category}`} type="button" role="tab" aria-selected="false">{category}</button>
+                </li>
             ))}            
         </ul>
     </div>
     <div id="tabs-services-action">
+        {<div class="pt-3 px-5" id={`styled-${targetCategory}`} role="tabpanel" aria-labelledby={`${targetCategory}-tab`}>
         {oneServices.map(service => (
-            <div class="hidden pt-3 px-5" id={`styled-${service.titulo.replace(/\s+/g, '')}`} role="tabpanel" aria-labelledby={`${service.titulo.replace(/\s+/g, '')}-tab`}>
                 <Card 
                     imagen={`${service.imagen}`}
                     precio_anterior={`${service.precio_anterior}`}
@@ -40,8 +46,8 @@ const oneServices = services.filter(service => service.category === targetCatego
                     descripcion_corta={`${service.descripcion_corta}`}
                     descripcion_larga={`${service.descripcion_larga}`}
                     accion_whatsapp={`${service.accion_whatsapp}`} />
-            </div>
         ))}
+        </div>}
     </div>
 </section>
 
@@ -71,19 +77,19 @@ const oneServices = services.filter(service => service.category === targetCatego
 </style>
 
 <script>
-  let tabs = document.querySelectorAll('#tabs-services > li > button');
+    let tabs = document.querySelectorAll('#tabs-services > li > button');
 
-  tabs.forEach(element => {
-      
-      element.addEventListener('click' , () => {
+    tabs.forEach(element => {
+        
+        element.addEventListener('click' , () => {
 
-          tabs.forEach(element => {
-              element.classList.remove('active');
-          });
+            tabs.forEach(element => {
+                element.classList.remove('active');
+            });
 
-          element.classList.add('active');
+            element.classList.add('active');
 
-      })
-      
-  });
+        })
+        
+    });
 </script>
