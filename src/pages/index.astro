@@ -417,12 +417,15 @@ import { Icon } from 'astro-iconify'
 <script is:inline>
 
 	document.addEventListener("DOMContentLoaded", () => {
+		
+		document.querySelector('body').style.overflow = 'hidden';
 
 		let loader = document.getElementById('loader');
 		setTimeout(() => {
 			loader.style.opacity = '0';
 			setTimeout(() => {
 				loader.classList.add('hidden');
+				document.querySelector('body').style.overflow = 'scroll';
 			}, 1000);
 		}, 2000);
 

@@ -35,7 +35,9 @@ import 'aos/dist/aos.css';
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3W6N035QCF"></script>
 <script>
 	import AOS from "aos"; 
-	AOS.init()
+	AOS.init({
+		offset: 40,
+	});
 	
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
