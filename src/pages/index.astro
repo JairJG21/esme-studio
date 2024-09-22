@@ -6,6 +6,9 @@ import { Icon } from 'astro-iconify'
 ---
 
 <Layout title="Esme Studio | Estudio de belleza">
+	<div class="loader" id="loader">
+		<img src="/img/esme-logo.svg" alt="">
+	</div>
 	<div class="section-btn-whatsapp" id="element-to-hide">
 		<a href="https://wa.me/7201844426?text=Hola,%20me%20gustaría%20agendar%20una%20cita"><Icon name="ic:baseline-whatsapp" /></a>
 	</div>
@@ -81,28 +84,28 @@ import { Icon } from 'astro-iconify'
 	<Servicios/>
 	<section>
 		<div class="bg-greensea-custom mt-20 md:mt-32 lg:mt-40 relative px-4 py-10 h-[900px] md:h-[600px] scroll-mt-12 flex flex-row flex-wrap" id="quiensoy">
-			<img class="absolute bottom-0 -left-12 w-[80%] sm:w-[55%] md:w-[45%] lg:w-[380px] lg:left-0" src="/img/esme.png" alt="">
+			<img data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" class="absolute bottom-0 -left-12 w-[80%] sm:w-[55%] md:w-[45%] lg:w-[380px] lg:left-0" src="/img/esme.png" alt="">
 			<div class="hidden md:flex md:w-[35%]"></div>
 			<div class="w-full md:w-[65%]">
-				<div class="text-center md:text-start mb-10">
+				<div data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" class="text-center md:text-start mb-10">
 					<h2 class="text-3xl font-light text-greensea-custom2">Arte, ciencia y pasión</h2>
 					<h1 class="text-3xl font-semibold text-white">al servicio de tu belleza.</h1>
 				</div>
-				<p class="text-center md:text-start text-white font-light">Soy <b class="font-semibold">Esme Alcala</b>, estilista apasionado con más de 4 años de experiencia en el mundo de la belleza.</p>
-				<p class="text-center md:text-start text-white mt-5 font-light">Mi misión es ayudarte a descubrir y realzar tu belleza única a través de técnicas personalizadas y un enfoque artístico. Creo que cada persona merece sentirse segura y hermosa en su propia piel, y es un honor para mí ser parte de ese viaje.</p>
+				<p data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" class="text-center md:text-start lg:text-xl text-white font-light">Soy <b class="font-semibold">Esme Alcala</b>, estilista apasionado con más de 4 años de experiencia en el mundo de la belleza.</p>
+				<p data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" class="text-center md:text-start lg:text-xl text-white mt-5 font-light">Mi misión es ayudarte a descubrir y realzar tu belleza única a través de técnicas personalizadas y un enfoque artístico. Creo que cada persona merece sentirse segura y hermosa en su propia piel, y es un honor para mí ser parte de ese viaje.</p>
 			</div>
 			<div class="w-full">
 				<div class="absolute right-0 bottom-0 z-10 box_no md:flex md:gap-5 lg:w-[800px] lg:gap-14">
-					<div class="text-center border-greensea-custom2 md:border-r-2 pe-5 mb-7 md:w-1/2 lg:pe-14">
+					<div data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" class="text-center border-greensea-custom2 md:border-r-2 pe-5 mb-7 md:w-1/2 lg:pe-14">
 						<p class="text-7xl sm:text-9xl md:text-8xl lg:text-9xl font-semibold text-greensea-custom2">+70</p>
 						<span class="text-greensea-custom2 sm:text-xl md:text-lg">clientas felices</span>
 					</div>
 					<hr class="border-greensea-custom2 mb-4 md:hidden">
-					<div class="text-center mb-7">
+					<div data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" class="text-center mb-7">
 						<p class="text-7xl sm:text-9xl md:text-8xl lg:text-9xl font-semibold text-greensea-custom2">+10</p>
 						<span class="text-greensea-custom2 sm:text-xl md:text-lg">certificaciones</span>
 					</div>
-					<div class="flex items-center justify-center gap-3 w-full">
+					<div data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" class="flex items-center justify-center gap-3 w-full">
 						<a href="https://www.facebook.com/esme.espinoza04" target="_blank"><Icon name="mdi:facebook" class="text-greensea-custom2 w-[40px] upper" /></a>
 						<a href="https://www.instagram.com/esmealca31/" target="_blank"><Icon name="mdi:instagram" class="text-greensea-custom2 w-[40px] upper" /></a>
 					</div>
@@ -131,9 +134,9 @@ import { Icon } from 'astro-iconify'
 			</ul>
 		</div>		
 		<div class="text-center mt-10">
-			<h1 class="text-dark-custom text-4xl font-bold">¿Lista para tu transformación? </h1>
-			<p class="text-dark-custom font-light my-5">Contáctame por WhatsApp <br> y agendemos tu cita.</p>
-			<a class="btn-whatsapp upper" href="https://wa.me/7201844426?text=Hola,%20me%20gustaría%20agendar%20una%20cita"><Icon name="ic:baseline-whatsapp" /> Contactar ahora</a>
+			<h1 data-aos="zoom-in" class="text-dark-custom text-4xl font-bold">¿Lista para tu transformación? </h1>
+			<p data-aos="zoom-in" class="text-dark-custom font-light my-5">Contáctame por WhatsApp <br> y agendemos tu cita.</p>
+			<a data-aos="zoom-in" class="btn-whatsapp upper" href="https://wa.me/7201844426?text=Hola,%20me%20gustaría%20agendar%20una%20cita"><Icon name="ic:baseline-whatsapp" /> Contactar ahora</a>
 		</div>
 		<div class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] mt-10">
 			<ul class="flex items-center justify-center md:justify-start xl:m-auto [&_li]:mx-2 [&_img]:max-w-none animate-marquee sm:animate-marquee2 md:animate-marquee3 lg:animate-none slide">
@@ -156,27 +159,27 @@ import { Icon } from 'astro-iconify'
 		</div>
 	</section>
 	<section class="mt-32 scroll-mt-20" id="galeria">
-		<div class="text-center mb-10">
+		<div data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" class="text-center mb-10">
 			<h2 class="text-3xl font-light text-dark-custom">Descubre las impresionantes transformaciones</h2>
 			<h1 class="text-3xl font-semibold text-greensea-custom">de belleza de nuestras clientas.</h1>
 		</div>
 		<div class="gallery">
-				<div>
+				<div data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom">
 					<img class="h-auto max-w-full rounded-lg" src="/img/gallery1.webp" alt="">
 				</div>
-				<div>
+				<div data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom">
 					<img class="h-auto max-w-full rounded-lg" src="/img/gallery2.webp" alt="">
 				</div>
-				<div>
+				<div data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom">
 					<img class="h-auto max-w-full rounded-lg" src="/img/gallery3.webp" alt="">
 				</div>				
-				<div>
+				<div data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom">
 					<img class="h-auto max-w-full rounded-lg" src="/img/gallery4.webp" alt="">
 				</div>
-				<div>
+				<div data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom">
 					<img class="h-auto max-w-full rounded-lg" src="/img/gallery5.webp" alt="">
 				</div>
-				<div>
+				<div data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom">
 					<img class="h-auto max-w-full rounded-lg" src="/img/gallery6.webp" alt="">
 				</div>
 		</div>
@@ -205,6 +208,34 @@ import { Icon } from 'astro-iconify'
 </Layout>
 
 <style>
+	.loader {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #1212129c;
+		z-index: 99999;
+		backdrop-filter: blur(100px);
+		opacity: 1;
+		transition: opacity 1s ease-in-out;
+	}
+	.loader img {
+		width: 80px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		animation: pulse 1s infinite alternate;
+	}
+	@keyframes pulse {
+		from {
+			opacity: 1;
+			width: 80px;
+		}
+		to {
+			opacity: 0;
+			width: 90px;
+		}
+	}
 	.upper {
 		transition: all 0.2s ease-in-out;
 	}
@@ -386,23 +417,15 @@ import { Icon } from 'astro-iconify'
 <script is:inline>
 
 	document.addEventListener("DOMContentLoaded", () => {
-		const triggerElement = document.getElementById('trigger');
 
-		if (triggerElement) {
-			const elementToHide = document.getElementById('element-to-hide');
+		let loader = document.getElementById('loader');
+		setTimeout(() => {
+			loader.style.opacity = '0';
+			setTimeout(() => {
+				loader.classList.add('hidden');
+			}, 1000);
+		}, 2000);
 
-			const observer = new IntersectionObserver((entries) => {
-				entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					elementToHide.classList.add('hidden');
-				} else {
-					elementToHide.classList.remove('hidden');
-				}
-				});
-			});
-
-			observer.observe(triggerElement);
-		}
 	});
 
 	document.addEventListener('DOMContentLoaded', () => {

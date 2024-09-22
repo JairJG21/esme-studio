@@ -3,13 +3,13 @@ import Icon from "astro-iconify";
 ---
 
 <section id="servicios" class="scroll-mt-20">
-    <div class="w-full text-center mt-10">
-        <h1 class="text-3xl text-dark-custom font-bold">Servicios</h1>
+    <div class="w-full text-center mt-10 duration-[1000ms] [animation-iteration-count:infinite] taos:opacity-0">
+        <h1 data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" class="text-3xl text-dark-custom font-bold">Servicios</h1>
     </div>
     
 
 <div class="mt-5 ps-5">
-    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center tabs-mod" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+    <ul data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" class="flex flex-wrap -mb-px text-sm font-medium text-center tabs-mod" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
         <li class="me-2" role="presentation">
             <button class="inline-block btn-filtro-servicio active" id="promociones-tab" data-tabs-target="#promociones" type="button" role="tab" aria-controls="promociones" aria-selected="false">Promociones</button>
         </li>
@@ -33,7 +33,7 @@ import Icon from "astro-iconify";
 <div id="default-tab-content">
     <div class="hidden pt-3 px-5" id="promociones" role="tabpanel" aria-labelledby="promociones-tab">
         <div class="md:flex md:flex-row md:flex-wrap">
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/gallery1.webp" alt="">
@@ -55,7 +55,7 @@ import Icon from "astro-iconify";
                     </div>
                 </div>
             </div>
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/gallery3.webp" alt="">
@@ -77,7 +77,7 @@ import Icon from "astro-iconify";
                     </div>
                 </div>
             </div>
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-0 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-0 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/gallery5.webp" alt="">
@@ -103,7 +103,7 @@ import Icon from "astro-iconify";
     </div>
     <div class="hidden pt-3 px-5" id="acidoglicolico" role="tabpanel" aria-labelledby="acidoglicolico-tab">
         <div class="md:flex md:flex-row md:flex-wrap">
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/acidoglicolico1.webp" alt="">
@@ -125,7 +125,7 @@ import Icon from "astro-iconify";
                     </div>
                 </div>
             </div>
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/acidoglicolico2.webp" alt="">
@@ -147,7 +147,7 @@ import Icon from "astro-iconify";
                     </div>
                 </div>
             </div>
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-0 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-0 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/acidoglicolico3.webp" alt="">
@@ -173,7 +173,7 @@ import Icon from "astro-iconify";
     </div>
     <div class="hidden pt-3 px-5" id="frecuenciafacial" role="tabpanel" aria-labelledby="frecuenciafacial-tab">
         <div class="md:flex md:flex-row md:flex-wrap">
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/radiofrecuencia1.webp" alt="">
@@ -195,7 +195,7 @@ import Icon from "astro-iconify";
                     </div>
                 </div>
             </div>
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/radiofrecuencia2.webp" alt="">
@@ -217,7 +217,7 @@ import Icon from "astro-iconify";
                     </div>
                 </div>
             </div>
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-0 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-0 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/radiofrecuencia3.webp" alt="">
@@ -243,7 +243,7 @@ import Icon from "astro-iconify";
     </div>
     <div class="hidden pt-3 px-5" id="dermapen" role="tabpanel" aria-labelledby="dermapen-tab">
         <div class="md:flex md:flex-row md:flex-wrap">
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/dermapen1.webp" alt="">
@@ -265,7 +265,7 @@ import Icon from "astro-iconify";
                     </div>
                 </div>
             </div>
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/dermapen2.webp" alt="">
@@ -287,7 +287,7 @@ import Icon from "astro-iconify";
                     </div>
                 </div>
             </div>
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/dermapen3.webp" alt="">
@@ -313,7 +313,7 @@ import Icon from "astro-iconify";
     </div>
     <div class="hidden pt-3 px-5" id="reducciondetallas" role="tabpanel" aria-labelledby="reducciondetallas-tab">
         <div class="md:flex md:flex-row md:flex-wrap">
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/talla1.webp" alt="">
@@ -335,7 +335,7 @@ import Icon from "astro-iconify";
                     </div>
                 </div>
             </div>
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/talla2.webp" alt="">
@@ -357,7 +357,7 @@ import Icon from "astro-iconify";
                     </div>
                 </div>
             </div>
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-0 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-0 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/talla3.webp" alt="">
@@ -379,7 +379,7 @@ import Icon from "astro-iconify";
                     </div>
                 </div>
             </div>
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-0 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-0 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/talla4.webp" alt="">
@@ -405,7 +405,7 @@ import Icon from "astro-iconify";
     </div>
     <div class="hidden pt-3 px-5" id="nanoplastia" role="tabpanel" aria-labelledby="nanoplastia-tab">
         <div class="md:flex md:flex-row md:flex-wrap">
-            <div class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
+            <div data-aos="zoom-in" class="md:p-2 w-full md:w-[50%] lg:w-[33%] mt-5 md:mt-3 lg:mt-2">
                 <div class="card-servicio">
                     <div>
                         <img src="/img/nanoplastia1.webp" alt="">

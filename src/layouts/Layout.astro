@@ -6,6 +6,7 @@ interface Props {
 const { title } = Astro.props;
 
 import '@fontsource-variable/lexend';
+import 'aos/dist/aos.css'; 
 ---
 
 <!doctype html>
@@ -33,6 +34,9 @@ import '@fontsource-variable/lexend';
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3W6N035QCF"></script>
 <script>
+	import AOS from "aos"; 
+	AOS.init()
+	
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
