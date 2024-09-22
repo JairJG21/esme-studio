@@ -417,6 +417,11 @@ import { Icon } from 'astro-iconify'
 <script is:inline>
 
 	document.addEventListener("DOMContentLoaded", () => {
+
+		window.scrollTo({
+		top: 0,
+		behavior: 'smooth'
+		});
 		
 		document.querySelector('body').style.overflow = 'hidden';
 
@@ -425,7 +430,7 @@ import { Icon } from 'astro-iconify'
 			loader.style.opacity = '0';
 			setTimeout(() => {
 				loader.classList.add('hidden');
-				document.querySelector('body').style.overflow = 'scroll';
+				document.querySelector('body').style.overflow = 'auto';
 			}, 1000);
 		}, 2000);
 
