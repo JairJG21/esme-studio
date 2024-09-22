@@ -4,10 +4,10 @@ import Icon from "astro-iconify";
 
 <nav class="navbar bg-white sticky top-0 z-50">
     <div class="w-full px-2">
-        <div class="w-1/2 flex items-center justify-start">
-            <a class="w-[40px] block"><img src="/img/esme-logo.svg" alt=""></a>
+        <div class="w-1/2 flex items-center justify-start lg:ps-3">
+            <a class="w-[40px] block" href="#inicio"><img src="/img/esme-logo.svg" alt=""></a>
         </div>
-        <div class="w-1/2 flex items-center justify-end">
+        <div class="w-1/2 flex items-center justify-end lg:hidden">
             <div class="drawer">
                 <input id="my-drawer" type="checkbox" class="drawer-toggle" />
                 <div class="drawer-content flex items-center justify-end">
@@ -27,8 +27,8 @@ import Icon from "astro-iconify";
             </div>
         </div>				
     </div>
-    <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
+    <div class="navbar-center hidden lg:flex lg:justify-end lg:w-1/2">
+        <ul class="menu menu-horizontal">
             <li class="nav-item2"><a href="#inicio">Inicio</a></li>
             <li class="nav-item2"><a href="#servicios">Sevicios</a></li>
             <li class="nav-item2"><a href="#quiensoy">Quien soy</a></li>
@@ -85,5 +85,20 @@ import Icon from "astro-iconify";
         z-index: 0;
         opacity: 1;
         transition: opacity 0.5s ease-in-out;
+    }
+    @media (min-width: 1024px) {
+        .nav-item2 a {
+            background-color: transparent !important;
+            transition: all 0.3s ease;
+            color: #95d2b3;
+            padding-block: 0px;
+            font-size: 16px;
+            font-weight: 300;
+        }
+        .nav-item2 a:hover {
+            text-shadow: #f7f7f7 0px 0px 10px;
+            transform: translateY(-2px);
+            color: #589e7b ;
+        }
     }
 </style>

@@ -13,6 +13,9 @@ export default {
 			},
 			animation: {
 				marquee: "marquee 15s linear infinite alternate",
+				marquee2: "marquee2 15s linear infinite alternate",
+				marquee3: "marquee3 8s linear infinite alternate",
+				marquee4: "marquee4 5s linear infinite alternate",
 				
 			},
 			keyframes: {
@@ -20,7 +23,18 @@ export default {
 					from: { transform: "translateX(0%)" },
 					to: { transform: "translateX(calc(-100% + 350px))" },
 				},
-				
+				marquee2: {
+					from: { transform: "translateX(0%)" },
+					to: { transform: "translateX(calc(-100% + 700px))" },
+				},
+				marquee3: {
+					from: { transform: "translateX(0%)" },
+					to: { transform: "translateX(calc(-100% + 1000px))" },
+				},
+				marquee4: {
+					from: { transform: "translateX(0%)" },
+					to: { transform: "translateX(calc(-100% + 1200px))" },
+				},
 			},
 		},
 	},

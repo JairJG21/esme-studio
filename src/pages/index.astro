@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-iconify'
 ---
 
-<Layout title="Esme Studio">
+<Layout title="Esme Studio | Estudio de belleza">
 	<div class="section-btn-whatsapp" id="element-to-hide">
 		<a href="https://wa.me/7201844426?text=Hola,%20me%20gustaría%20agendar%20una%20cita"><Icon name="ic:baseline-whatsapp" /></a>
 	</div>
@@ -20,14 +20,15 @@ import { Icon } from 'astro-iconify'
 			<Icon name="heroicons:x-mark" class="text-white" />
 		</button>
 	</div>
+	<div id="inicio"></div>
 	<Menu />
-	<section class="h-[550px]">
+	<section class="h-[550px] md:h-auto">
 		<div id="default-carousel" class="relative w-full h-full" data-carousel="slide" data-carousel-interval="7000">
-			<div class="relative h-full overflow-hidden md:h-96">
+			<div class="relative h-full overflow-hidden md:h-96 lg:h-[500px]">
 				<div class="hidden duration-700 ease-in-out" data-carousel-item>
 					<img src="/img/carousel_1.webp" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
 					<div class="absolute inset-0 bg-black/65"></div>
-					<div class="absolute inset-0 flex items-center justify-center flex-col px-2 text-center">
+					<div class="absolute inset-0 flex items-center justify-center flex-col px-2 sm:px-20 md:px-32 text-center">
 						<h1 class="text-white text-4xl font-bold">¡Renueva tu belleza con nosotros!</h1>
 						<p class="text-white textarea-md">Reserva tu cita y descrube nuestra magia.</p>
 						<a class="btn btn-greensea" href="https://wa.me/7201844426?text=Hola,%20me%20gustaría%20agendar%20una%20cita">Quiero una cita</a>
@@ -36,16 +37,26 @@ import { Icon } from 'astro-iconify'
 				<div class="hidden duration-700 ease-in-out" data-carousel-item>
 					<img src="/img/carousel_2.webp" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
 					<div class="absolute inset-0 bg-black/65"></div>
-					<div class="absolute inset-0 flex items-center justify-center flex-col px-2 text-center">
+					<div class="absolute inset-0 flex items-center justify-center flex-col px-2 sm:px-20 md:px-32 text-center">
 						<h1 class="text-white text-4xl font-bold">¡Felices Fiestas Patrias!</h1>
 						<p class="text-white textarea-md">Renueva tu estilo y brilla con orgullo patrio. Conoce las promociones que tenemos para ti.</p>
 						<a class="btn btn-greensea" href="#servicios">Conocer Promociones</a>
+					</div>
+				</div>
+				<div class="hidden duration-700 ease-in-out" data-carousel-item>
+					<img src="/img/carousel_3.webp" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+					<div class="absolute inset-0 bg-black/65"></div>
+					<div class="absolute inset-0 flex items-center justify-center flex-col px-2 sm:px-20 md:px-44 text-center">
+						<h1 class="text-white text-4xl font-bold">¡Una imagen dice mas!</h1>
+						<p class="text-white textarea-md">Conoce los cambios que nuestras clientas han experimentado con nosotros.</p>
+						<a class="btn btn-greensea" href="#galeria">Ver los cambios</a>
 					</div>
 				</div>
 			</div>
 			<div class="absolute points_carousel z-30 flex -translate-x-1/2 left-1/2 space-x-3 rtl:space-x-reverse">
 				<button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
 				<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+				<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
 			</div>
 			<div class="relative w-full">
 				<button type="button" class="absolute btn_carousel top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
@@ -69,28 +80,29 @@ import { Icon } from 'astro-iconify'
 	</section>
 	<Servicios/>
 	<section>
-		<div class="bg-greensea-custom mt-20 relative px-4 py-10 h-[900px]">
-			<img class="absolute bottom-0 -left-12 w-[85%]" src="/img/esme.png" alt="">
-			<div class="w-full">
-				<div class="text-center mb-10">
+		<div class="bg-greensea-custom mt-20 md:mt-32 lg:mt-40 relative px-4 py-10 h-[900px] md:h-[600px] scroll-mt-12 flex flex-row flex-wrap" id="quiensoy">
+			<img class="absolute bottom-0 -left-12 w-[80%] sm:w-[55%] md:w-[45%] lg:w-[380px] lg:left-0" src="/img/esme.png" alt="">
+			<div class="hidden md:flex md:w-[35%]"></div>
+			<div class="w-full md:w-[65%]">
+				<div class="text-center md:text-start mb-10">
 					<h2 class="text-3xl font-light text-greensea-custom2">Arte, ciencia y pasión</h2>
 					<h1 class="text-3xl font-semibold text-white">al servicio de tu belleza.</h1>
 				</div>
-				<p class="text-center text-white font-light">Soy <b class="font-semibold">Esme Alcala</b>, estilista apasionado con más de 4 años de experiencia en el mundo de la belleza.</p>
-				<p class="text-center text-white mt-5 font-light">Mi misión es ayudarte a descubrir y realzar tu belleza única a través de técnicas personalizadas y un enfoque artístico. Creo que cada persona merece sentirse segura y hermosa en su propia piel, y es un honor para mí ser parte de ese viaje.</p>
+				<p class="text-center md:text-start text-white font-light">Soy <b class="font-semibold">Esme Alcala</b>, estilista apasionado con más de 4 años de experiencia en el mundo de la belleza.</p>
+				<p class="text-center md:text-start text-white mt-5 font-light">Mi misión es ayudarte a descubrir y realzar tu belleza única a través de técnicas personalizadas y un enfoque artístico. Creo que cada persona merece sentirse segura y hermosa en su propia piel, y es un honor para mí ser parte de ese viaje.</p>
 			</div>
 			<div class="w-full">
-				<div class="absolute right-0 bottom-0 z-10 box_no">
-					<div class="text-center border-greensea-custom2 mb-7">
-						<p class="text-7xl font-semibold text-greensea-custom2">+70</p>
-						<span class="text-greensea-custom2">clientas felices</span>
+				<div class="absolute right-0 bottom-0 z-10 box_no md:flex md:gap-5 lg:w-[800px] lg:gap-14">
+					<div class="text-center border-greensea-custom2 md:border-r-2 pe-5 mb-7 md:w-1/2 lg:pe-14">
+						<p class="text-7xl sm:text-9xl md:text-8xl lg:text-9xl font-semibold text-greensea-custom2">+70</p>
+						<span class="text-greensea-custom2 sm:text-xl md:text-lg">clientas felices</span>
 					</div>
-					<hr class="border-greensea-custom2 mb-4">
+					<hr class="border-greensea-custom2 mb-4 md:hidden">
 					<div class="text-center mb-7">
-						<p class="text-7xl font-semibold text-greensea-custom2">+10</p>
-						<span class="text-greensea-custom2">certificaciones</span>
+						<p class="text-7xl sm:text-9xl md:text-8xl lg:text-9xl font-semibold text-greensea-custom2">+10</p>
+						<span class="text-greensea-custom2 sm:text-xl md:text-lg">certificaciones</span>
 					</div>
-					<div class="flex items-center justify-center gap-3">
+					<div class="flex items-center justify-center gap-3 w-full">
 						<a href="https://www.facebook.com/esme.espinoza04" target="_blank"><Icon name="mdi:facebook" class="text-greensea-custom2 w-[40px] upper" /></a>
 						<a href="https://www.instagram.com/esmealca31/" target="_blank"><Icon name="mdi:instagram" class="text-greensea-custom2 w-[40px] upper" /></a>
 					</div>
@@ -98,9 +110,9 @@ import { Icon } from 'astro-iconify'
 			</div>
 		</div>
 	</section>
-	<section class="mt-32" id="trigger">
+	<section class="mt-32">
 		<div class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] mt-10">
-			<ul class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-marquee slide">
+			<ul class="flex items-center justify-center md:justify-start xl:m-auto [&_li]:mx-2 [&_img]:max-w-none animate-marquee sm:animate-marquee2 md:animate-marquee3 lg:animate-none slide">
 				<li>
 					<img src="/img/slide1.webp" alt="" />
 				</li>
@@ -124,7 +136,7 @@ import { Icon } from 'astro-iconify'
 			<a class="btn-whatsapp upper" href="https://wa.me/7201844426?text=Hola,%20me%20gustaría%20agendar%20una%20cita"><Icon name="ic:baseline-whatsapp" /> Contactar ahora</a>
 		</div>
 		<div class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] mt-10">
-			<ul class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-marquee slide">
+			<ul class="flex items-center justify-center md:justify-start xl:m-auto [&_li]:mx-2 [&_img]:max-w-none animate-marquee sm:animate-marquee2 md:animate-marquee3 lg:animate-none slide">
 				<li>
 					<img src="/img/slide6.webp" alt="" />
 				</li>
@@ -143,13 +155,12 @@ import { Icon } from 'astro-iconify'
 			</ul>
 		</div>
 	</section>
-	<section class="mt-32">
+	<section class="mt-32 scroll-mt-20" id="galeria">
 		<div class="text-center mb-10">
 			<h2 class="text-3xl font-light text-dark-custom">Descubre las impresionantes transformaciones</h2>
 			<h1 class="text-3xl font-semibold text-greensea-custom">de belleza de nuestras clientas.</h1>
 		</div>
-		<div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-5 gallery">
-			<div class="grid gap-4">
+		<div class="gallery">
 				<div>
 					<img class="h-auto max-w-full rounded-lg" src="/img/gallery1.webp" alt="">
 				</div>
@@ -159,8 +170,6 @@ import { Icon } from 'astro-iconify'
 				<div>
 					<img class="h-auto max-w-full rounded-lg" src="/img/gallery3.webp" alt="">
 				</div>				
-			</div>
-			<div class="grid gap-4">
 				<div>
 					<img class="h-auto max-w-full rounded-lg" src="/img/gallery4.webp" alt="">
 				</div>
@@ -170,14 +179,13 @@ import { Icon } from 'astro-iconify'
 				<div>
 					<img class="h-auto max-w-full rounded-lg" src="/img/gallery6.webp" alt="">
 				</div>
-			</div>
 		</div>
 
 	</section>
 	<footer class="bg-greensea-custom mt-10">
 		<div class="mx-auto w-full max-w-screen-xl">
-			<div class="px-4 py-6 text-center">
-				<div class="flex items-center justify-center mt-4 space-x-2">
+			<div class="px-4 py-6 text-center lg:flex lg:items-center lg:justify-between lg:px-20">
+				<div class="flex items-center justify-center mt-4 lg:mt-0 space-x-2">
 					<a href="https://www.facebook.com/esme.espinoza04"><Icon name="mdi:facebook" class="text-white w-[35px] upper" /></a>
 					<a href="https://www.instagram.com/esmealca31/"><Icon name="mdi:instagram" class="text-white w-[35px] upper" /></a>
 				</div>
@@ -186,19 +194,6 @@ import { Icon } from 'astro-iconify'
 			</div>
 		</div>
 	</footer>
-
-
-	<!-- Main modal -->
-	<dialog id="my_modal_3" class="modal modal-bottom sm:modal-middle">
-	<div class="modal-box">
-		<form method="dialog">
-		<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-		</form>
-		<h3 class="text-lg font-bold">Acido Glicólico + Radiofrecuencia Facial</h3>
-		<p class="py-4">Ayuda a la hiperpigmentación, las quemaduras solares, reduce las líneas de expresión, arrugas, manchas y le devuelve la luminosidad al rostro. El ácido glicólico corrige los problemas de la piel favoreciendo la renovación celular de las capas superiores de esta a través de la exfoliación. Ayuda frente a la sequedad de la piel, el eczema y la psoriasis, así como también, las verrugas, la piel áspera y la rosácea.
-			</p>
-	</div>
-	</dialog>
 
 	<!-- Modal -->
 	<div id="imageModal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 hidden justify-center items-center">
@@ -303,11 +298,29 @@ import { Icon } from 'astro-iconify'
 		background-color: #252422d7;
 		backdrop-filter: blur(3px);
 	}
+	.gallery {
+		max-width: 80%;
+		margin: auto;
+		margin-top: 50px;
+		display: flex;
+		flex-flow: row wrap;
+		gap: 10px;
+	}
+	.gallery div {
+		flex: auto;
+		overflow: hidden;
+		border-radius: 20px;
+		transition: opacity 0.3s ease;
+	}
 	.gallery img {
-		transition: all 0.2s ease-in-out;
+		height: 200px;
+		width: auto;
+		min-width: 100%;
+		object-fit: cover;
+		transition: scale 0.3s ease;
 	}
 	.gallery img:hover {
-		transform: scale(1.05);
+		scale: 1.1;
 	}
 	.btn_carousel .btn_prev {
 		position: absolute;
@@ -331,6 +344,42 @@ import { Icon } from 'astro-iconify'
 		background-color: #ffffffab;
 		border-radius: 20px 0px 0px 0px;
 		padding: 10px;
+	}
+	@media (min-width: 640px) {
+		.btn_carousel .btn_prev {
+			position: absolute;
+			bottom: 250px;
+			left: 5vw;
+		}
+		.btn_carousel .btn_next {
+			position: absolute;
+			bottom: 250px;
+			right: 5vw;
+		}
+	}
+	@media (min-width: 768px) {
+		.btn_carousel .btn_prev {
+			position: absolute;
+			bottom: 180px;
+			left: 5vw;
+		}
+		.btn_carousel .btn_next {
+			position: absolute;
+			bottom: 180px;
+			right: 5vw;
+		}
+	}
+	@media (min-width: 1024px) {
+		.btn_carousel .btn_prev {
+			position: absolute;
+			bottom: 230px;
+			left: 5vw;
+		}
+		.btn_carousel .btn_next {
+			position: absolute;
+			bottom: 230px;
+			right: 5vw;
+		}
 	}
 </style>
 
@@ -357,7 +406,7 @@ import { Icon } from 'astro-iconify'
 	});
 
 	document.addEventListener('DOMContentLoaded', () => {
-		const images = document.querySelectorAll('.grid img');
+		const images = document.querySelectorAll('.gallery img');
 		const modal = document.getElementById('imageModal');
 		const modalImage = document.getElementById('modalImage');
 		const closeModal = document.getElementById('closeModal');
