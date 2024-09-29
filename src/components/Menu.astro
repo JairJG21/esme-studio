@@ -11,13 +11,13 @@ import Icon from "astro-iconify";
             <div class="drawer">
                 <input id="my-drawer" type="checkbox" class="drawer-toggle" />
                 <div class="drawer-content flex items-center justify-end">
-                    <label for="my-drawer" class="drawer-button"><Icon id="my-drawer" name="heroicons:bars-3" class="text-black dark:text-white icon-md" /></label>
+                    <label for="my-drawer" class="drawer-button"><Icon id="my-drawer" name="heroicons:bars-3" class="text-black icon-md" /></label>
                 </div>
                 <div class="drawer-side">
                     <div class="capa"></div>
                     <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
                     <ul class="menu bg-[#121212] text-base-content min-h-full w-80 p-4 flex justify-center items-center">
-                        <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"><Icon name="heroicons:x-mark" class="text-3xl"/></label>
+                        <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"><Icon name="heroicons:x-mark" class="text-3xl text-white"/></label>
                         <li class="nav-item2"><a href="#inicio" onclick="document.getElementById('my-drawer').checked = false;">Inicio</a></li>
                         <li class="nav-item2"><a href="#servicios" onclick="document.getElementById('my-drawer').checked = false;">Sevicios</a></li>
                         <li class="nav-item2"><a href="#quiensoy" onclick="document.getElementById('my-drawer').checked = false;">Quien soy</a></li>
